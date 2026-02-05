@@ -1,0 +1,86 @@
+/* h1{
+    color: green !important;
+} */
+
+/* Universal Selector */
+
+* {
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(66, 95, 66);
+}
+
+/* Navigation Bar */
+nav#top {
+    background-color: rgb(33, 55, 33);
+    padding: 15px;
+}
+
+nav#top a.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav#top a.nav-link:hover {
+    text-decoration: underline;
+}
+
+div{
+    float: right;
+}
+
+/* TYPE SLECTOR - CALL THE TAG */
+h1 {
+    color: rgb(221, 138, 14) !important;
+    text-align: center;
+    font-size: 2rem;
+}
+section{
+    height: 150vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* ID Selector */
+#zuitt-motto {
+    letter-spacing: 5px;
+    color: white;
+    font-style: italic;
+}
+h3{
+    letter-spacing: 25px;
+}
+/* Adjacent Selector */
+h3 + img{
+    height: 300px;
+    width: auto;
+}
+ol{
+    list-style-type: none;
+    padding: 0;
+}
+
+/* CLASS SELECTOR */
+.offering-item{
+    text-transform: uppercase;
+}
+
+/* DESCENDANT SELECTOR */
+#bootcamp-learning-list li{
+    color: rgb(247, 122, 20);
+}
+
+a{
+    text-decoration: none;
+}
