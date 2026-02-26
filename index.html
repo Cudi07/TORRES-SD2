@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TORRES-SD2 | Sessions Landing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    :root {
+      --brand-1: #0d6efd; /* Bootstrap primary */
+      --brand-2: #6c757d; /* secondary */
+    }
+    body {
+      background: #f6f8fb;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(13,110,253,0.12), rgba(111,66,193,0.10));
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 2.5rem 0 1.5rem;
+    }
+    .search-input {
+      box-shadow: 0 0.25rem 0.75rem rgba(13,110,253,0.1);
+    }
+    .session-card {
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .session-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.08);
+    }
+    .badge-session {
+      letter-spacing: .04em;
+    }
+    .list-small .list-group-item {
+      padding: .35rem .75rem;
+      font-size: .925rem;
+    }
+    footer {
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-semibold mb-1">TORRES-SD2</h1>
+          <p class="lead text-muted mb-0">Landing page to navigate through all sessions and their pages.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-white text-secondary"><i class="bi bi-search"></i></span>
+            <input id="filterInput" class="form-control search-input" type="search" placeholder="Filter sessions (e.g., '03', 'photos', 'music')" aria-label="Filter sessions">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-3" id="sessionsGrid">
+      <!-- Session 01 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="01 session1 about me text">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 01</span>
+            </div>
+            <h5 class="card-title mb-2">Session 01</h5>
+            <p class="card-text text-muted">About me (text file).</p>
+            <div class="mt-auto">
+              <a class="btn btn-primary w-100" href="session-01/aboutme.txt">Open aboutme.txt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 02 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="02 session2 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 02</span>
+            </div>
+            <h5 class="card-title mb-2">Session 02</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-02/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 03 (multiple pages, no root index) -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="03 session3 part1 sample photo logo music gallery">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 03</span>
+            </div>
+            <h5 class="card-title mb-2">Session 03</h5>
+            <p class="card-text text-muted">Multiple pages available.</p>
+            <div class="mt-auto">
+              <div class="list-group list-group-flush border-top list-small">
+                <a class="list-group-item list-group-item-action" href="session-03/part1.html">part1.html</a>
+                <a class="list-group-item list-group-item-action" href="session-03/sample1.html">sample1.html</a>
+                <a class="list-group-item list-group-item-action" href="session-03/photo/photo.html">photo/photo.html</a>
+                <a class="list-group-item list-group-item-action" href="session-03/photo/logo/logo.html">photo/logo/logo.html</a>
+                <a class="list-group-item list-group-item-action" href="session-03/music/music.html">music/music.html</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 04 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="04 session4 index activity">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 04</span>
+            </div>
+            <h5 class="card-title mb-2">Session 04</h5>
+            <p class="card-text text-muted">Main and activity pages.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-04/index.html">Open main page</a>
+              <a class="btn btn-outline-secondary" href="session-04/activity.html">Open activity page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 05 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="05 session5 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 05</span>
+            </div>
+            <h5 class="card-title mb-2">Session 05</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-05/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 06 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="06 session6 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 06</span>
+            </div>
+            <h5 class="card-title mb-2">Session 06</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-06/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 08 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="08 session8 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 08</span>
+            </div>
+            <h5 class="card-title mb-2">Session 08</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-08/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 09 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="09 session9 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 09</span>
+            </div>
+            <h5 class="card-title mb-2">Session 09</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-09/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 10 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="10 session10 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 10</span>
+            </div>
+            <h5 class="card-title mb-2">Session 10</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-10/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session 11 -->
+      <div class="col-12 col-sm-6 col-lg-4 session-item" data-keywords="11 session11 index">
+        <div class="card session-card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge text-bg-primary badge-session">SESSION 11</span>
+            </div>
+            <h5 class="card-title mb-2">Session 11</h5>
+            <p class="card-text text-muted">Main page available.</p>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-primary" href="session-11/index.html">Open main page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="container my-4 small">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span>Built with Bootstrap 5</span>
+      <span class="text-muted">TORRES-SD2</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script>
+    // Simple client-side filter for sessions
+    (function() {
+      const input = document.getElementById('filterInput');
+      const items = Array.from(document.querySelectorAll('.session-item'));
+      function norm(s){ return (s||'').toLowerCase().trim(); }
+      function filter() {
+        const q = norm(input.value);
+        items.forEach(el => {
+          const text = norm(el.innerText + ' ' + (el.dataset.keywords||''));
+          const show = !q || text.includes(q);
+          el.style.display = show ? '' : 'none';
+        });
+      }
+      input.addEventListener('input', filter);
+    })();
+  </script>
+</body>
+</html>
