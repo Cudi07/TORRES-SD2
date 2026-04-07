@@ -33,7 +33,6 @@ console.log(pokemon.length);
 
 console.log(pokemon[pokemon.length - 1]);
 
-
 // [SECTION] Array Mutator Methods
 let fruits = ["Apple", "Banana", "Kiwi"];
 
@@ -76,7 +75,7 @@ console.log("My favorite fruits now: " + fruits);
 fruits.splice(2, 1);
 console.log("My favorite fruits now: " + fruits);
 
-// for each() - executes a provided function once for each array element    
+// for each() - executes a provided function once for each array element
 fruits.forEach((fruit) => {
-    console.log("I like " + fruit);
+  console.log("I like " + fruit);
 });
